@@ -1,0 +1,11 @@
+name: my-app
+version: 1
+env:
+  NODE_ENV: production
+  RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
+build:
+  env:
+    NODE_ENV: production
+  command: npm install && npm run build
+start:
+  command: npm start
