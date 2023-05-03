@@ -50,6 +50,8 @@ router.post('/', async (req, res) => {
     res
       .cookie('token', token, {
         httpOnly: false,
+        sameSite: 'none',
+        secure: true,
       })
       .send();
   } catch (err) {
