@@ -47,6 +47,8 @@ router.post('/', async (req, res) => {
       process.env.JWT_SECRET
     );
 
+    console.log(token);
+
     res
       .cookie('token', token, {
         httpOnly: true,
